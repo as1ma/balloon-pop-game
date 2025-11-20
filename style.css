@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+    background-image: url('images/clouds.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: grid;
+    justify-content: center;
+    /* grid-template-columns: ; */
+    align-items: center;
+    /* flex-direction: column; */
+    cursor: url(images/cursor.cur), pointer;
+    overflow: hidden;
+    /* height: 1080px;
+    width: 1920px; */
+}
+
+.holes-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 2em; 
+    /* width: 25%; */
+    /* height: 1080px;
+    width: 1920px; */
+    /* gap: 0.5em; */
+    row-gap: 50px;
+}
+
+div{ /*not best practice  */
+    background-color:skyblue;
+    height: 300px;
+    width: 300px;
+    border-radius: 300px;
+    display: flex;
+    align-items: center;
+    /* flex-basis: 30%; */
+    /* flex-grow: 0; */
+    margin: 1em;
+
+    /* background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    position: relative;
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+   */
+}
+
+.balloon{
+    background-image: url('images/balloon2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.popped-balloon{
+    background-image: url('images/popped-balloon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.impatient-balloon{
+    background-image: url('images/impatient-balloon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bonus-balloon{
+    background-image: url('images/bonus-balloon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gone{
+    display: none; 
+}
+
+.game-stats{
+    /* background-color:aliceblue; */
+    border-radius: 20px;
+    width: 90vw;
+    height: 10vh;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 5px;
+    /* box-shadow: 0 1px 32px rgb(62, 62, 62); */
+
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    position: relative;
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
+.score-row{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.stats-timer-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(224,231,239,0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.stats-timer-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #f87838, #6366f1);
+    border-radius: 10px;
+    width: 0%; 
+    animation: pulseBar 1s infinite alternate;
+}
+
+.start-game-hide{
+    visibility: hidden;
+}
+
+.start-game{
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+    background-color: rgba(140, 179, 211, 0.944);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+}
+
+.start{
+    /* background-color: rgba(140, 179, 211, 0.944); */
+    background-color: rgba(192, 221, 244, 0.944);
+    border-radius: 0;
+    border-radius: 10px;
+    border: 8px solid;
+    box-shadow: 0 1px 32px white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 45px;
+    padding-top: 100px;
+    margin: 25em;
+    margin-top: 15em;
+    margin-left: 47em;
+    height:600px;
+    width: 500px;
+    font-family: monospace;
+    /* z-index: 1000; */
+}
+
+.start{
+    position: relative;
+    z-index: 10000;
+}
+
+.start-btn{
+    background-color: #1e293b;
+    color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-family: monospace;
+    /* font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 10px;
+    padding: 1rem 1.6rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+} 
+
+.start-btn:hover{
+  background-color: #fff;
+  color: #0d172a;
+}
+
+
+.end-screen-hide{
+    visibility: hidden;
+}
+
+.end-screen{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(140, 179, 211, 0.944);
+    /* background: linear-gradient(skyblue, white, no-repeat); */
+    position: fixed;
+    top: 0;
+    left: 0; 
+    z-index: 9999;
+}
+
+.end-game{
+    /* background-color: rgba(140, 179, 211, 0.944); */
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 8px solid;
+    box-shadow: 0 1px 32px white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 45px;
+    margin: 25em;
+    margin-left: 47em;
+    height: 250px;
+    width: 400px;
+    font-family: monospace;
+    position: relative;
+    z-index: 10000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.end-game.congrats {
+    height: 300px;
+    width: 450px;
+}
+
+.congratulations-hide, .game-lost-hide{
+    display: none;
+}
+
+.congratulations{
+    text-align: center;
+}
+
+.end-score{
+    margin-top: 20px;
+}
+
+.play-again{
+    background-color: #1e293b;
+    color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-family: monospace;
+    /* font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 10px;
+    padding: 0.8rem 1.3rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.play-again:hover {
+  background-color: #fff;
+  color: #0d172a;
+}
+
+.bonus-balloon.popped-balloon {
+    background-image: url('images/popped-balloon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
