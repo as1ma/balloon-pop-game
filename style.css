@@ -160,6 +160,9 @@ div{ /*not best practice  */
     top: 0;
     left: 0;
     z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 
 }
 
@@ -176,8 +179,8 @@ div{ /*not best practice  */
     text-align: center;
     padding: 45px;
     padding-top: 100px;
-    margin: 25em;
-    margin-top: 15em;
+    /* margin: 25em; */
+    /* margin-top: 15em; */
     margin-left: auto;
     margin-right: auto;
     height:600px;
