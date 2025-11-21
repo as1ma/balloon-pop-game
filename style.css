@@ -43,6 +43,7 @@ body{
     width: 1920px; */
     /* gap: 0.5em; */
     row-gap: 50px;
+    position: relative;
 }
 
 div{ /*not best practice  */
@@ -177,14 +178,12 @@ div{ /*not best practice  */
     padding-top: 100px;
     margin: 25em;
     margin-top: 15em;
-    margin-left: 47em;
+    margin-left: auto;
+    margin-right: auto;
     height:600px;
     width: 500px;
     font-family: monospace;
     /* z-index: 1000; */
-}
-
-.start{
     position: relative;
     z-index: 10000;
 }
