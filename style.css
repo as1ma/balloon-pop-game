@@ -235,6 +235,9 @@ div{ /*not best practice  */
     top: 0;
     left: 0; 
     z-index: 9999;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .end-game{
@@ -248,8 +251,8 @@ div{ /*not best practice  */
     align-items: center;
     text-align: center;
     padding: 45px;
-    margin: 25em;
-    margin-left: 47em;
+    /* margin: 25em;
+    margin-left: 47em; */
     height: 250px;
     width: 400px;
     font-family: monospace;
