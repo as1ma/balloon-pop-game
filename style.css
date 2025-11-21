@@ -19,6 +19,18 @@ body{
     width: 1920px; */
 }
 
+@media screen and (min-width: 600px) {
+    body{
+        width: 100vw;
+    }  
+}
+
+@media screen and (min-width: 320px) {
+    body{
+        width: 100vw;
+    }  
+}
+
 .holes-container{
     display: flex;
     align-items: center;
